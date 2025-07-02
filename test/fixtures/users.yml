@@ -1,9 +1,4 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  username: MyString
-  password_digest: MyString
-
-two:
-  username: MyString
-  password_digest: MyString
+# test/fixtures/users.yml
+admin:
+  username: admin
+  password_digest: <%= BCrypt::Password.create('123') %> # Senha criptografada para '123'

@@ -1,21 +1,20 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# test/fixtures/chamados.yml
 one:
-  tipo: MyString
-  categoria: MyString
-  titulo: MyString
-  descricao: MyText
-  status: MyString
-  resposta: MyText
-  solucao: MyText
-  user: one
+  user: admin # Associa este chamado ao usuário 'admin' do users.yml
+  tipo: Incidente
+  categoria: Computador com problema
+  titulo: Problema de Teste Inicial
+  descricao: O computador está com a tela azul constantemente.
+  status: Em atendimento
+  resposta:
+  solucao:
 
-two:
-  tipo: MyString
-  categoria: MyString
-  titulo: MyString
-  descricao: MyText
-  status: MyString
-  resposta: MyText
-  solucao: MyText
-  user: two
+closed_chamado:
+  user: admin
+  tipo: Requisicao
+  categoria: Novo computador
+  titulo: Requisicao de Novo Hardware
+  descricao: Necessidade de um novo computador para o setor de marketing.
+  status: Fechado
+  resposta: Analisado e aprovado.
+  solucao: Equipamento entregue e configurado.
