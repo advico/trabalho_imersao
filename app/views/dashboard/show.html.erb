@@ -1,0 +1,22 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
+  <h1 class="text-4xl font-bold mb-8">Bem-vindo ao Dashboard!</h1>
+
+  <% if flash[:notice] %>
+    <div class="bg-green-500 text-white p-3 rounded mb-4 text-center">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <div class="space-y-4">
+    <p class="text-lg">Você está logado como <%= current_user.username %>.</p>
+
+    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+      <%= link_to "Criar Chamado", new_chamado_path, class: "bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg text-center transition duration-300 ease-in-out" %>
+      <%= link_to "Meus Chamados", chamados_path, class: "bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg text-lg text-center transition duration-300 ease-in-out" %>
+    </div>
+
+    <div class="mt-8">
+      <%= button_to "Sair (Logout)", logout_path, method: :delete, class: "bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" %>
+    </div>
+  </div>
+</div>

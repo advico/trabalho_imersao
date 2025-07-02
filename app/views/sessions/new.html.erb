@@ -1,0 +1,28 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-900">
+  <div class="bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md border border-green-500">
+    <h2 class="text-white text-3xl font-bold mb-6 text-center">Zzrot</h2>
+    <h3 class="text-white text-xl font-semibold mb-6 text-center">Login</h3>
+
+    <% if flash[:alert] %>
+      <div class="bg-red-500 text-white p-3 rounded mb-4 text-center">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: login_path, method: :post, local: true, class: "space-y-4") do |form| %>
+      <div>
+        <label for="username" class="block text-gray-300 text-sm font-bold mb-2">USUÁRIO</label>
+        <%= form.text_field :username, placeholder: "digite seu usuário", class: "shadow appearance-none border border-gray-600 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 text-white" %>
+      </div>
+
+      <div>
+        <label for="password" class="block text-gray-300 text-sm font-bold mb-2">SENHA</label>
+        <%= form.password_field :password, placeholder: "******", class: "shadow appearance-none border border-gray-600 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 text-white" %>
+      </div>
+
+      <div class="flex items-center justify-center pt-4">
+        <%= form.submit "ENTRAR", class: "bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full cursor-pointer" %>
+      </div>
+    <% end %>
+  </div>
+</div>
