@@ -75,7 +75,7 @@ Para rodar este projeto em sua máquina local, siga os passos abaixo:
     ```
     Saia do console:
     ```bash
-    exit
+    quit
     ```
 
 ## ▶ Como Rodar a Aplicação
