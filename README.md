@@ -43,10 +43,9 @@ Para rodar este projeto em sua máquina local, siga os passos abaixo:
 
 2.  **Clone o repositório:**
     ```bash
-    git clone [LINK_DO_SEU_REPOSITORIO]
+    git clone https://github.com/advico/trabalho_imersao.git
     cd trabalho_imersao
     ```
-    (Substitua `[LINK_DO_SEU_REPOSITORIO]` pelo link real)
 
 3.  **Instale as dependências do Ruby:**
     ```bash
